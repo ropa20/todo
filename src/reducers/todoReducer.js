@@ -1,17 +1,17 @@
 // holds your current state and action
-const initialData={
-    todos:[], 
-}
 
-const todoReducer=(state=initialData, action)=>{
+
+const todoReducer=(state=[], action)=>{
     switch(action.type)
     {
         case "ADD_TODO" :
-
-        return{
-            ...state, //previos state
-            todos:[...state.todos,action.data]
-        }
+        //For some reason the initial data of state is recieved as {} insted of null
+        //so we had to change it to an array
+        state = Object.keys(state).length === 0?[]:state
+        return [
+            ...state,
+            action.data
+        ]
         
         case "DELETE_TODO" :
         const newList=state.todos.filter((elem)=>elem.id !== action.id)
