@@ -1,0 +1,19 @@
+
+
+@import 'antd/dist/antd.css';
+
+.ant-layout{
+  background-color: rgb(238, 238, 238);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ant-layout-content {
+  min-height: 90vh;
+  padding-top:30px;
+}
+
+.ant-layout-footer {
+  background-color: rgb(238, 238, 238);
+}
+
